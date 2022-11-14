@@ -20,7 +20,9 @@ public class WorldCupController {
 
     @Autowired
     private CountriesService countriesService;
+    @Autowired
     private PlayerService playerService;
+    @Autowired
     private StadiumService stadiumService;
 
     @RequestMapping("")
