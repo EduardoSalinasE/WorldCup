@@ -1,5 +1,6 @@
 package pe.ineapp.ep3_mundial.Mundial.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,6 +29,7 @@ public class Countries {
             generator = "countries_sequence"
     )
     @Id
+    @JsonIgnore
     Long id;
     String pais;
     String continente;

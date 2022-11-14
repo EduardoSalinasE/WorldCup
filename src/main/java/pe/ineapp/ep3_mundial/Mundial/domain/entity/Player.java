@@ -1,11 +1,13 @@
 package pe.ineapp.ep3_mundial.Mundial.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity(name="Player")
 @Table(
@@ -16,7 +18,7 @@ import javax.persistence.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Player {
+public class Player{
 
     @SequenceGenerator(
             name="player_sequence",
@@ -28,6 +30,7 @@ public class Player {
             generator = "player_sequence"
     )
     @Id
+    @JsonIgnore
     Long id;
     String jugador;
     String pais;
