@@ -51,7 +51,7 @@ public class WorldCupController {
 
     @PostMapping
     @RequestMapping("/addstadium")
-    public ResponseEntity<BasicResponse> addstadium(@RequestBody StadiumRequest request){
+    public ResponseEntity<BasicResponse> addStadium(@RequestBody StadiumRequest request){
         BasicResponse response = stadiumService.addStadium(request);
         return ResponseEntity.status(response.getCode()).body(response);
     }
