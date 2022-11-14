@@ -23,6 +23,11 @@ public class WorldCupController {
     private PlayerService playerService;
     private StadiumService stadiumService;
 
+    @RequestMapping("")
+    public String Index(@RequestParam(defaultValue = "Invitado") String param){
+        return "Binevenido ".concat(param);
+    }
+
     @GetMapping
     @RequestMapping("/countries")
     public CountriesResponse getAllCountries(){return countriesService.getAll();}
